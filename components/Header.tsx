@@ -12,6 +12,7 @@ export function Header() {
   const navLinks = [
     { href: "/services/pc-build", label: "Build Only" },
     { href: "/services/parts-and-build", label: "Parts + Build" },
+    { href: "/blog", label: "Blog" },
   ];
 
   return (

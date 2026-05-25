@@ -74,8 +74,8 @@ export default async function CityPCBuildPage({ params }: Props) {
             <span className="text-blue-300">{city.name}, Missouri</span>
           </h1>
           <p className="text-white/65 text-lg leading-relaxed max-w-2xl mb-8">
-            Looking for professional PC assembly in {city.name}, MO? Excellent PC Building serves {city.name}
-            and all of Southwest Missouri. You bring the parts — we build a machine you&apos;ll be proud of.
+            Looking for professional PC assembly in {city.name}, MO? Excellent PC Building serves {city.name} and
+            all of Southwest Missouri. You bring the parts — we build a machine you&apos;ll be proud of.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
@@ -94,7 +94,44 @@ export default async function CityPCBuildPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Why choose us for this city */}
+      {/* City-specific context */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 className="text-2xl font-bold text-slate-800 mb-4">
+                PC Building in {city.name}
+              </h2>
+              <p className="text-slate-600 leading-relaxed mb-4">{city.blurb}</p>
+              <p className="text-slate-500 text-sm leading-relaxed">{city.about}</p>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold text-slate-700 uppercase tracking-widest mb-4">
+                Popular Builds in {city.name}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {city.popularBuilds.map((b) => (
+                  <span
+                    key={b}
+                    className="bg-slate-50 border border-gray-200 text-slate-600 text-sm font-medium px-4 py-2 rounded-lg"
+                  >
+                    {b}
+                  </span>
+                ))}
+              </div>
+              <div className="mt-8 bg-slate-50 border border-gray-200 rounded-xl p-5">
+                <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-2">Build Only Service</p>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  You supply the parts — we do the assembly, cable management, BIOS setup, and stress testing.
+                  A 90-day workmanship guarantee is included with every build.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why choose us */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-4xl mx-auto px-5">
           <h2 className="text-2xl font-bold text-slate-800 mb-8">
@@ -144,8 +181,25 @@ export default async function CityPCBuildPage({ params }: Props) {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-16 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-5">
+          <h2 className="text-2xl font-bold text-slate-800 mb-8">
+            Questions from {city.name} Customers
+          </h2>
+          <div className="space-y-5">
+            {city.faq.map((item) => (
+              <div key={item.q} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                <h3 className="font-semibold text-slate-800 mb-2">{item.q}</h3>
+                <p className="text-slate-500 text-sm leading-relaxed">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Quote form */}
-      <section id="quote" className="py-16 bg-slate-50">
+      <section id="quote" className="py-16 bg-white">
         <div className="max-w-xl mx-auto px-5">
           <h2 className="text-2xl font-bold text-slate-800 mb-2 text-center">
             Request a Quote in {city.name}
@@ -158,7 +212,7 @@ export default async function CityPCBuildPage({ params }: Props) {
       </section>
 
       {/* Other cities */}
-      <section className="py-14 bg-white border-t border-gray-200">
+      <section className="py-14 bg-slate-50 border-t border-gray-200">
         <div className="max-w-4xl mx-auto px-5">
           <p className="text-sm text-slate-500 mb-4">Also serving nearby communities:</p>
           <div className="flex flex-wrap gap-2">
