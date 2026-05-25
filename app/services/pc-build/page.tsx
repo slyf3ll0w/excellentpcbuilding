@@ -36,7 +36,7 @@ export default function PCBuildPage() {
           </div>
           <div className="relative rounded-2xl overflow-hidden h-72 lg:h-96">
             <Image
-              src="https://images.unsplash.com/photo-1593640408182-31c228b4b9c5?auto=format&fit=crop&w=900&q=80"
+              src="https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?auto=format&fit=crop&w=900&q=80"
               alt="PC assembly and building service"
               fill
               className="object-cover"

@@ -164,8 +164,8 @@ export default function HomePage() {
                   <Image
                     src={
                       i === 0
-                        ? "https://images.unsplash.com/photo-1593640408182-31c228b4b9c5?auto=format&fit=crop&w=900&q=80"
-                        : "https://images.unsplash.com/photo-1547628641-ec2090d0e60f?auto=format&fit=crop&w=900&q=80"
+                        ? "https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=900&q=80"
+                        : "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?auto=format&fit=crop&w=900&q=80"
                     }
                     alt={svc.title}
                     fill

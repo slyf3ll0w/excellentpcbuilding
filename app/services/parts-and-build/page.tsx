@@ -36,7 +36,7 @@ export default function PartsAndBuildPage() {
           </div>
           <div className="relative rounded-2xl overflow-hidden h-72 lg:h-96">
             <Image
-              src="https://images.unsplash.com/photo-1547628641-ec2090d0e60f?auto=format&fit=crop&w=900&q=80"
+              src="https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=900&q=80"
               alt="PC parts and component selection"
               fill
               className="object-cover"
