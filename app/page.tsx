@@ -136,17 +136,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── PC IMAGE STRIP ───────────────────────────────────── */}
-      <section className="relative h-64 sm:h-80 overflow-hidden">
-        <Image
-          src="https://images.unsplash.com/photo-1593640408182-31c228b4b9c5?auto=format&fit=crop&w=1800&q=80"
-          alt="Custom gaming PC build"
-          fill
-          className="object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
-      </section>
-
       {/* ── SERVICES ─────────────────────────────────────────── */}
       <section id="services" className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-5">
