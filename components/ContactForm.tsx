@@ -19,7 +19,6 @@ export function ContactForm({ defaultService, defaultCity }: Props) {
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    // Using Formspree — replace YOUR_FORM_ID with your Formspree form ID
     const res = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
       method: "POST",
       body: data,
@@ -34,21 +33,21 @@ export function ContactForm({ defaultService, defaultCity }: Props) {
 
   if (submitted) {
     return (
-      <div className="bg-[#0D1626] border border-[#0070FF]/30 rounded-2xl p-10 text-center">
-        <div className="w-14 h-14 rounded-full bg-[#0070FF]/15 flex items-center justify-center mx-auto mb-4">
+      <div className="bg-slate-50 border border-gray-200 rounded-xl p-10 text-center">
+        <div className="w-14 h-14 rounded-full bg-[#0070FF]/10 flex items-center justify-center mx-auto mb-4">
           <svg className="w-7 h-7 text-[#0070FF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-xl font-bold text-white mb-2">Message Received!</h3>
-        <p className="text-gray-400">We&apos;ll get back to you within 24 hours with a custom quote.</p>
+        <h3 className="text-xl font-bold text-slate-800 mb-2">Message Received!</h3>
+        <p className="text-slate-500">We&apos;ll get back to you within 24 hours with a custom quote.</p>
       </div>
     );
   }
 
   const inputCls =
-    "w-full bg-[#0A1220] border border-[#1A2840] rounded-lg px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-[#0070FF] focus:ring-1 focus:ring-[#0070FF] transition-colors";
-  const labelCls = "block text-sm font-medium text-gray-300 mb-1.5";
+    "w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-slate-800 text-sm placeholder-gray-400 focus:outline-none focus:border-[#0070FF] focus:ring-1 focus:ring-[#0070FF] transition-colors";
+  const labelCls = "block text-sm font-medium text-slate-700 mb-1.5";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
@@ -84,10 +83,10 @@ export function ContactForm({ defaultService, defaultCity }: Props) {
       <div>
         <label className={labelCls}>Service Needed *</label>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <label className={`flex items-start gap-3 border rounded-xl p-4 cursor-pointer transition-all ${
+          <label className={`flex items-start gap-3 border rounded-lg p-4 cursor-pointer transition-all ${
             service === "build-only"
-              ? "border-[#0070FF] bg-[#0070FF]/10"
-              : "border-[#1A2840] hover:border-[#0070FF]/50"
+              ? "border-[#0070FF] bg-[#0070FF]/5"
+              : "border-gray-300 hover:border-[#0070FF]/50 bg-white"
           }`}>
             <input
               type="radio"
@@ -99,14 +98,14 @@ export function ContactForm({ defaultService, defaultCity }: Props) {
               className="mt-0.5 accent-[#0070FF]"
             />
             <div>
-              <p className="text-white font-semibold text-sm">Build Only</p>
-              <p className="text-gray-500 text-xs mt-0.5">I have my parts — just need assembly</p>
+              <p className="text-slate-800 font-semibold text-sm">Build Only</p>
+              <p className="text-slate-500 text-xs mt-0.5">I have my parts — just need assembly</p>
             </div>
           </label>
-          <label className={`flex items-start gap-3 border rounded-xl p-4 cursor-pointer transition-all ${
+          <label className={`flex items-start gap-3 border rounded-lg p-4 cursor-pointer transition-all ${
             service === "parts-and-build"
-              ? "border-[#0070FF] bg-[#0070FF]/10"
-              : "border-[#1A2840] hover:border-[#0070FF]/50"
+              ? "border-[#0070FF] bg-[#0070FF]/5"
+              : "border-gray-300 hover:border-[#0070FF]/50 bg-white"
           }`}>
             <input
               type="radio"
@@ -118,8 +117,8 @@ export function ContactForm({ defaultService, defaultCity }: Props) {
               className="mt-0.5 accent-[#0070FF]"
             />
             <div>
-              <p className="text-white font-semibold text-sm">Parts + Build</p>
-              <p className="text-gray-500 text-xs mt-0.5">Source the parts and build for me</p>
+              <p className="text-slate-800 font-semibold text-sm">Parts + Build</p>
+              <p className="text-slate-500 text-xs mt-0.5">Source the parts and build for me</p>
             </div>
           </label>
         </div>
@@ -146,10 +145,10 @@ export function ContactForm({ defaultService, defaultCity }: Props) {
         disabled={loading}
         className="w-full bg-[#0070FF] hover:bg-[#0058CC] text-white font-bold py-3.5 rounded-lg transition-colors disabled:opacity-60 disabled:cursor-not-allowed text-sm"
       >
-        {loading ? "Sending…" : "Send My Request →"}
+        {loading ? "Sending…" : "Send My Request"}
       </button>
 
-      <p className="text-center text-xs text-gray-600">
+      <p className="text-center text-xs text-slate-400">
         We typically respond within a few hours during business hours.
       </p>
     </form>

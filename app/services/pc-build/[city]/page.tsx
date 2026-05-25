@@ -57,36 +57,36 @@ export default async function CityPCBuildPage({ params }: Props) {
       />
 
       {/* Hero */}
-      <section className="bg-[#060B16] pt-16 pb-20 border-b border-[#1A2840]">
+      <section className="bg-[#0f172a] pt-16 pb-20">
         <div className="max-w-4xl mx-auto px-5">
-          <div className="flex flex-wrap gap-2 mb-6 text-sm text-gray-500">
+          <div className="flex flex-wrap gap-2 mb-6 text-sm text-white/50">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <span>/</span>
             <Link href="/services/pc-build" className="hover:text-white transition-colors">PC Build Service</Link>
             <span>/</span>
-            <span className="text-white">{city.name}</span>
+            <span className="text-white/85">{city.name}</span>
           </div>
-          <span className="inline-block bg-[#0070FF]/15 text-[#0070FF] text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-5">
+          <span className="inline-block bg-white/10 border border-white/18 text-white/85 text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-5">
             {city.name}, MO
           </span>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-5">
+          <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-tight mb-5">
             PC Build Service in<br />
-            <span className="text-[#0070FF]">{city.name}, Missouri</span>
+            <span className="text-blue-300">{city.name}, Missouri</span>
           </h1>
-          <p className="text-gray-400 text-lg leading-relaxed max-w-2xl mb-8">
+          <p className="text-white/65 text-lg leading-relaxed max-w-2xl mb-8">
             Looking for professional PC assembly in {city.name}, MO? Excellent PC Building serves {city.name}
             and all of Southwest Missouri. You bring the parts — we build a machine you&apos;ll be proud of.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="#quote"
-              className="inline-flex items-center justify-center bg-[#0070FF] hover:bg-[#0058CC] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-[#0070FF]/20"
+              className="inline-flex items-center justify-center bg-[#0070FF] hover:bg-[#0058CC] text-white font-semibold px-8 py-4 rounded-lg transition-all"
             >
-              Get a Quote in {city.name} →
+              Get a Quote in {city.name}
             </Link>
             <Link
               href="/services/pc-build"
-              className="inline-flex items-center justify-center border border-[#1A2840] hover:border-[#0070FF]/40 text-gray-400 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all"
+              className="inline-flex items-center justify-center border border-white/20 hover:border-white/40 text-white/70 hover:text-white font-semibold px-8 py-4 rounded-lg transition-all"
             >
               About This Service
             </Link>
@@ -95,9 +95,9 @@ export default async function CityPCBuildPage({ params }: Props) {
       </section>
 
       {/* Why choose us for this city */}
-      <section className="py-16 bg-[#0A1220]">
+      <section className="py-16 bg-slate-50">
         <div className="max-w-4xl mx-auto px-5">
-          <h2 className="text-2xl font-extrabold text-white mb-8">
+          <h2 className="text-2xl font-bold text-slate-800 mb-8">
             Why {city.name} Residents Choose Excellent PC Building
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
@@ -115,10 +115,10 @@ export default async function CityPCBuildPage({ params }: Props) {
                 desc: "Your PC is fully stress tested before we hand it back. No surprises after you get it home.",
               },
             ].map((item) => (
-              <div key={item.title} className="bg-[#0D1626] border border-[#1A2840] rounded-xl p-5">
+              <div key={item.title} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
                 <div className="w-2 h-2 rounded-full bg-[#0070FF] mb-3" />
-                <h3 className="text-white font-bold text-sm mb-2">{item.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                <h3 className="text-slate-800 font-semibold text-sm mb-2">{item.title}</h3>
+                <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -126,14 +126,14 @@ export default async function CityPCBuildPage({ params }: Props) {
       </section>
 
       {/* What's included */}
-      <section className="py-16 bg-[#060B16]">
+      <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-5">
-          <h2 className="text-2xl font-extrabold text-white mb-6">
+          <h2 className="text-2xl font-bold text-slate-800 mb-6">
             What&apos;s Included with Every Build
           </h2>
           <ul className="space-y-3">
             {svc.benefits.map((b) => (
-              <li key={b} className="flex items-center gap-3 text-gray-300 text-sm">
+              <li key={b} className="flex items-center gap-3 text-slate-600 text-sm">
                 <svg className="w-4 h-4 text-[#0070FF] flex-shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M2 8l3.5 3.5L14 3.5" />
                 </svg>
@@ -145,28 +145,28 @@ export default async function CityPCBuildPage({ params }: Props) {
       </section>
 
       {/* Quote form */}
-      <section id="quote" className="py-16 bg-[#0A1220]">
+      <section id="quote" className="py-16 bg-slate-50">
         <div className="max-w-xl mx-auto px-5">
-          <h2 className="text-2xl font-extrabold text-white mb-2 text-center">
+          <h2 className="text-2xl font-bold text-slate-800 mb-2 text-center">
             Request a Quote in {city.name}
           </h2>
-          <p className="text-gray-500 text-center mb-8">Free, no obligation. We respond fast.</p>
-          <div className="bg-[#0D1626] border border-[#1A2840] rounded-2xl p-7">
+          <p className="text-slate-500 text-center mb-8">Free, no obligation. We respond fast.</p>
+          <div className="bg-white border border-gray-200 rounded-xl p-7 shadow-sm">
             <ContactForm defaultService="build-only" defaultCity={city.name} />
           </div>
         </div>
       </section>
 
       {/* Other cities */}
-      <section className="py-14 bg-[#060B16] border-t border-[#1A2840]">
+      <section className="py-14 bg-white border-t border-gray-200">
         <div className="max-w-4xl mx-auto px-5">
-          <p className="text-sm text-gray-500 mb-4">Also serving nearby communities:</p>
+          <p className="text-sm text-slate-500 mb-4">Also serving nearby communities:</p>
           <div className="flex flex-wrap gap-2">
             {nearbyCities.map((c) => (
               <Link
                 key={c.slug}
                 href={`/services/pc-build/${c.slug}`}
-                className="bg-[#0D1626] border border-[#1A2840] hover:border-[#0070FF]/40 text-gray-400 hover:text-white text-sm px-4 py-2 rounded-lg transition-all"
+                className="bg-white border border-gray-200 hover:border-[#0070FF] text-slate-600 hover:text-[#0070FF] text-sm px-4 py-2 rounded-lg transition-all"
               >
                 {c.name}, MO
               </Link>
