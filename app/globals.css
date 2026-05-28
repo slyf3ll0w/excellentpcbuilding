@@ -101,10 +101,15 @@ select option {
   color: var(--foreground);
 }
 
-/* Subtle circuit board pattern on all section backgrounds */
+/* Circuit board pattern on section backgrounds — cards are solid to cover it */
 .bg-background,
-.bg-card,
 .bg-muted {
   background-image: url('/circuit-bg.svg');
   background-size: 160px 160px;
+}
+
+/* No pattern in the header */
+header .bg-background,
+header .bg-muted {
+  background-image: none;
 }
