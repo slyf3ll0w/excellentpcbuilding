@@ -31,6 +31,14 @@ export const metadata: Metadata = {
     images: [{ url: "/logo.png", width: 1024, height: 1024, alt: "Excellent PC Building" }],
   },
   robots: { index: true, follow: true },
+  icons: {
+    icon: [
+      { url: "/logo.png", sizes: "192x192", type: "image/png" },
+      { url: "/logo.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: { url: "/logo.png", sizes: "180x180", type: "image/png" },
+    shortcut: "/logo.png",
+  },
 };
 
 const localBusinessSchema = {

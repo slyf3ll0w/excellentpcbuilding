@@ -97,10 +97,12 @@ export default function HomePage() {
         }}
       >
         <div className="absolute inset-0 bg-background/82" />
+        {/* Primary color glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-64 bg-primary/20 blur-3xl pointer-events-none" />
         <div className="relative max-w-5xl mx-auto px-5">
-          <p className="inline-block bg-card border border-border text-muted-foreground text-sm font-medium px-4 py-1.5 mb-6 tracking-wide">
+          <span className="inline-block bg-primary/20 border border-primary/40 text-primary text-sm font-semibold px-4 py-1.5 mb-6 tracking-wide">
             Springfield, Missouri&apos;s Custom PC Experts
-          </p>
+          </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight tracking-tight mb-5">
             Professional <span className="text-primary">PC Building</span>
             <br />
@@ -119,19 +121,22 @@ export default function HomePage() {
             </Link>
             <Link
               href="#services"
-              className="border border-border hover:border-foreground/40 text-muted-foreground hover:text-foreground font-semibold px-8 py-4 text-base transition-all"
+              className="border border-border hover:border-primary/60 text-muted-foreground hover:text-foreground font-semibold px-8 py-4 text-base transition-all"
             >
               View Services
             </Link>
           </div>
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-8 pt-8 border-t border-border">
-            {["14 Cities Served", "Gaming & Workstation Builds", "90-Day Guarantee", "Based in Springfield, MO"].map(
-              (s) => (
-                <span key={s} className="text-sm text-muted-foreground font-medium">
-                  {s}
-                </span>
-              )
-            )}
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 pt-8 border-t border-border">
+            {[
+              { label: "14 Cities Served", color: "text-primary" },
+              { label: "Gaming & Workstation Builds", color: "text-amber-400" },
+              { label: "90-Day Guarantee", color: "text-primary" },
+              { label: "Based in Springfield, MO", color: "text-amber-400" },
+            ].map((s) => (
+              <span key={s.label} className={`text-sm font-semibold ${s.color}`}>
+                {s.label}
+              </span>
+            ))}
           </div>
         </div>
       </section>
@@ -140,7 +145,9 @@ export default function HomePage() {
       <section id="services" className="py-24 bg-background">
         <div className="max-w-6xl mx-auto px-5">
           <div className="text-center mb-14">
-            <p className="text-primary text-xs font-semibold uppercase tracking-widest mb-3">What We Do</p>
+            <span className="inline-block bg-primary/15 text-primary text-xs font-bold uppercase tracking-wider px-3 py-1 mb-4">
+              What We Do
+            </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight">
               Two ways we can help you
             </h2>
@@ -150,8 +157,10 @@ export default function HomePage() {
             {SERVICES.map((svc, i) => (
               <div
                 key={svc.slug}
-                className="group bg-card border border-border overflow-hidden"
+                className="group bg-card border border-border overflow-hidden relative"
               >
+                {/* Top accent bar */}
+                <div className={`h-1 w-full ${i === 0 ? "bg-primary" : "bg-amber-400"}`} />
                 <div className="relative h-52 overflow-hidden">
                   <Image
                     src={
@@ -165,7 +174,7 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="p-7">
-                  <span className="inline-block bg-primary/15 text-primary text-xs font-bold uppercase tracking-wider px-3 py-1 mb-4">
+                  <span className={`inline-block text-xs font-bold uppercase tracking-wider px-3 py-1 mb-4 ${i === 0 ? "bg-primary/15 text-primary" : "bg-amber-400/15 text-amber-400"}`}>
                     {svc.shortName}
                   </span>
                   <h3 className="text-lg font-bold text-foreground mb-2">{svc.title}</h3>
@@ -200,7 +209,9 @@ export default function HomePage() {
       <section className="py-24 bg-muted">
         <div className="max-w-6xl mx-auto px-5">
           <div className="text-center mb-14">
-            <p className="text-primary text-xs font-semibold uppercase tracking-widest mb-3">Why Choose Us</p>
+            <span className="inline-block bg-primary/15 text-primary text-xs font-bold uppercase tracking-wider px-3 py-1 mb-4">
+              Why Choose Us
+            </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight">
               Built right. Backed by us.
             </h2>
@@ -209,8 +220,10 @@ export default function HomePage() {
             {whyUs.map((item) => (
               <div
                 key={item.title}
-                className="bg-card border border-border p-6"
+                className="bg-card border border-border p-6 relative overflow-hidden"
               >
+                {/* Left accent stripe */}
+                <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-primary" />
                 <div className="w-11 h-11 bg-primary/15 text-primary flex items-center justify-center mb-4">
                   {item.icon}
                 </div>
@@ -226,7 +239,9 @@ export default function HomePage() {
       <section className="py-24 bg-background">
         <div className="max-w-6xl mx-auto px-5">
           <div className="text-center mb-14">
-            <p className="text-primary text-xs font-semibold uppercase tracking-widest mb-3">Customer Reviews</p>
+            <span className="inline-block bg-amber-400/15 text-amber-400 text-xs font-bold uppercase tracking-wider px-3 py-1 mb-4">
+              Customer Reviews
+            </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight">
               Don&apos;t just take our word for it
             </h2>
@@ -234,9 +249,11 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((r) => (
-              <div key={r.name} className="bg-card border border-border p-6">
-                <div className="text-amber-400 text-lg mb-3 tracking-wide">★★★★★</div>
-                <p className="text-muted-foreground text-sm leading-relaxed italic mb-5">&ldquo;{r.text}&rdquo;</p>
+              <div key={r.name} className="bg-card border border-border p-6 relative overflow-hidden">
+                <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-amber-400" />
+                <div className="text-amber-400 text-2xl mb-3 font-serif leading-none">&ldquo;</div>
+                <div className="text-amber-400 text-sm mb-3 tracking-wide">★★★★★</div>
+                <p className="text-muted-foreground text-sm leading-relaxed italic mb-5">{r.text}</p>
                 <div>
                   <p className="font-semibold text-foreground text-sm">{r.name}</p>
                   <p className="text-muted-foreground text-xs mt-0.5">{r.city}</p>
@@ -256,10 +273,12 @@ export default function HomePage() {
             fill
             className="object-cover"
           />
+          <div className="absolute inset-0 bg-primary/20" />
         </div>
-        <div className="bg-primary flex items-center justify-center px-10 py-12">
-          <div>
-            <p className="text-primary-foreground/60 text-xs font-semibold uppercase tracking-widest mb-3">Ready to Build?</p>
+        <div className="bg-primary flex items-center justify-center px-10 py-12 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 -translate-y-1/2 translate-x-1/2 rounded-full pointer-events-none" />
+          <div className="relative">
+            <p className="text-primary-foreground/70 text-xs font-bold uppercase tracking-widest mb-3">Ready to Build?</p>
             <h2 className="text-3xl font-bold text-primary-foreground mb-4 leading-tight">
               Get your custom PC<br />quote today — free.
             </h2>
@@ -280,7 +299,9 @@ export default function HomePage() {
       <section className="py-24 bg-muted">
         <div className="max-w-6xl mx-auto px-5">
           <div className="text-center mb-14">
-            <p className="text-primary text-xs font-semibold uppercase tracking-widest mb-3">Where We Serve</p>
+            <span className="inline-block bg-primary/15 text-primary text-xs font-bold uppercase tracking-wider px-3 py-1 mb-4">
+              Where We Serve
+            </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight">
               Serving Southwest Missouri
             </h2>
@@ -293,12 +314,12 @@ export default function HomePage() {
               <Link
                 key={city.slug}
                 href={`/services/pc-build/${city.slug}`}
-                className="bg-card border border-border p-4 text-center hover:border-primary transition-all group"
+                className="bg-card border border-border p-4 text-center hover:border-primary hover:bg-primary/5 transition-all group"
               >
-                <svg className="w-5 h-5 text-primary/40 group-hover:text-primary mx-auto mb-2 transition-colors" viewBox="0 0 20 20" fill="currentColor">
+                <svg className="w-5 h-5 text-primary/50 group-hover:text-primary mx-auto mb-2 transition-colors" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                 </svg>
-                <p className="text-foreground text-xs font-semibold">{city.name}</p>
+                <p className="text-foreground text-xs font-semibold group-hover:text-primary transition-colors">{city.name}</p>
                 <p className="text-muted-foreground text-[10px]">MO</p>
               </Link>
             ))}
@@ -310,7 +331,9 @@ export default function HomePage() {
       <section id="contact" className="py-24 bg-background">
         <div className="max-w-2xl mx-auto px-5">
           <div className="text-center mb-10">
-            <p className="text-primary text-xs font-semibold uppercase tracking-widest mb-3">Get Started</p>
+            <span className="inline-block bg-primary/15 text-primary text-xs font-bold uppercase tracking-wider px-3 py-1 mb-4">
+              Get Started
+            </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight mb-3">
               Request a Free Quote
             </h2>
@@ -318,7 +341,7 @@ export default function HomePage() {
               Fill out the form and we&apos;ll get back to you within a few hours with pricing and next steps.
             </p>
           </div>
-          <div className="bg-card border border-border p-7 sm:p-10">
+          <div className="bg-card border border-border border-t-2 border-t-primary p-7 sm:p-10">
             <ContactForm />
           </div>
         </div>

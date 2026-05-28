@@ -16,7 +16,7 @@ export default function PartsAndBuildPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-card border-b border-border pt-16 pb-20 relative overflow-hidden">
+      <section className="bg-card border-b border-border border-t-2 border-t-amber-400 pt-16 pb-20 relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-5 relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <span className="inline-block bg-primary/15 border border-primary/30 text-primary text-xs font-semibold uppercase tracking-wider px-3 py-1 mb-5">
@@ -72,7 +72,7 @@ export default function PartsAndBuildPage() {
           <h2 className="text-2xl font-bold text-foreground mb-8 text-center">Everything Included</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {svc.benefits.map((b) => (
-              <div key={b} className="flex items-start gap-3 bg-card border border-border p-5">
+              <div key={b} className="flex items-start gap-3 bg-card border border-border border-l-2 border-l-amber-400 p-5">
                 <div className="w-8 h-8 bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
                   <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M2 8l3.5 3.5L14 3.5" />
@@ -113,7 +113,7 @@ export default function PartsAndBuildPage() {
         <div className="max-w-xl mx-auto px-5">
           <h2 className="text-2xl font-bold text-foreground mb-2 text-center">Start your build today</h2>
           <p className="text-muted-foreground text-center mb-8">Free consultation — no pressure.</p>
-          <div className="bg-card border border-border p-7">
+          <div className="bg-card border border-border border-t-2 border-t-amber-400 p-7">
             <ContactForm defaultService="parts-and-build" />
           </div>
         </div>

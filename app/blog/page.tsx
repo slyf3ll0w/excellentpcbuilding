@@ -12,7 +12,7 @@ export default function BlogPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-card border-b border-border pt-16 pb-14">
+      <section className="bg-card border-b border-border border-t-2 border-t-primary pt-16 pb-14">
         <div className="max-w-4xl mx-auto px-5">
           <p className="text-primary text-xs font-semibold uppercase tracking-widest mb-3">Resources</p>
           <h1 className="text-4xl font-bold text-foreground tracking-tight mb-4">PC Building Blog</h1>
@@ -30,7 +30,7 @@ export default function BlogPage() {
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="group bg-card border border-border p-7 hover:border-primary transition-all"
+                className="group bg-card border border-border border-t-2 border-t-primary p-7 hover:border-primary transition-all"
               >
                 <span className="inline-block bg-primary/15 text-primary text-xs font-bold uppercase tracking-wider px-3 py-1 mb-4">
                   {post.category}

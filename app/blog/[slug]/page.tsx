@@ -61,7 +61,7 @@ export default async function BlogPostPage({ params }: Props) {
       />
 
       {/* Hero */}
-      <section className="bg-card border-b border-border pt-16 pb-14">
+      <section className="bg-card border-b border-border border-t-2 border-t-primary pt-16 pb-14">
         <div className="max-w-3xl mx-auto px-5">
           <div className="flex flex-wrap gap-2 mb-6 text-sm text-muted-foreground">
             <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
@@ -151,7 +151,7 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
 
           {/* CTA */}
-          <div className="mt-12 bg-muted border border-border p-7">
+          <div className="mt-12 bg-muted border border-border border-l-2 border-l-primary p-7">
             <p className="text-primary text-xs font-semibold uppercase tracking-widest mb-2">Excellent PC Building</p>
             <h3 className="text-xl font-bold text-foreground mb-2">Ready to build? We serve{" "}
               <Link href="/services/pc-build/springfield" className="text-primary hover:underline">Springfield</Link>

@@ -11,9 +11,10 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-card border-b border-border pt-16 pb-14">
+      <section className="bg-card border-b border-border pt-16 pb-14 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-1 bg-primary" />
         <div className="max-w-4xl mx-auto px-5">
-          <p className="text-primary text-xs font-semibold uppercase tracking-widest mb-3">Get in Touch</p>
+          <span className="inline-block bg-primary/15 text-primary text-xs font-bold uppercase tracking-wider px-3 py-1 mb-4">Get in Touch</span>
           <h1 className="text-4xl font-bold text-foreground tracking-tight mb-4">
             Request a Free Quote
           </h1>
@@ -93,7 +94,7 @@ export default function ContactPage() {
             </div>
 
             {/* Right: form */}
-            <div className="bg-card border border-border p-7 sm:p-8">
+            <div className="bg-card border border-border border-t-2 border-t-primary p-7 sm:p-8">
               <ContactForm />
             </div>
           </div>

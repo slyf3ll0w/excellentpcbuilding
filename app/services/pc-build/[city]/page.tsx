@@ -57,7 +57,7 @@ export default async function CityPCBuildPage({ params }: Props) {
       />
 
       {/* Hero */}
-      <section className="bg-card border-b border-border pt-16 pb-20">
+      <section className="bg-card border-b border-border border-t-2 border-t-primary pt-16 pb-20">
         <div className="max-w-4xl mx-auto px-5">
           <div className="flex flex-wrap gap-2 mb-6 text-sm text-muted-foreground">
             <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
@@ -189,7 +189,7 @@ export default async function CityPCBuildPage({ params }: Props) {
           </h2>
           <div className="space-y-5">
             {city.faq.map((item) => (
-              <div key={item.q} className="bg-card border border-border p-6">
+              <div key={item.q} className="bg-card border border-border border-l-2 border-l-primary p-6">
                 <h3 className="font-semibold text-foreground mb-2">{item.q}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{item.a}</p>
               </div>
@@ -205,7 +205,7 @@ export default async function CityPCBuildPage({ params }: Props) {
             Request a Quote in {city.name}
           </h2>
           <p className="text-muted-foreground text-center mb-8">Free, no obligation. We respond fast.</p>
-          <div className="bg-card border border-border p-7">
+          <div className="bg-card border border-border border-t-2 border-t-primary p-7">
             <ContactForm defaultService="build-only" defaultCity={city.name} />
           </div>
         </div>
