@@ -1,13 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const lastScrollY = useRef(0);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const onScroll = () => {
+      const current = window.scrollY;
+      setVisible(current < lastScrollY.current || current < 10);
+      lastScrollY.current = current;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const navLinks = [
     { href: "/services/pc-build", label: "Build Only" },
@@ -16,7 +28,7 @@ export function Header() {
   ];
 
   return (
-    <header className="bg-[#060B16]/95 backdrop-blur-md border-b border-[#1A2840] sticky top-0 z-50">
+    <header className={`bg-[#060B16]/95 backdrop-blur-md border-b border-[#1A2840] sticky top-0 z-50 transition-transform duration-300 ${visible ? "translate-y-0" : "-translate-y-full"}`}>
       <div className="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center group">
