@@ -25,6 +25,7 @@ export function Header() {
     { href: "/", label: "Home" },
     { href: "/services/pc-build", label: "Build Only" },
     { href: "/services/parts-and-build", label: "Parts + Build" },
+    { href: "/about", label: "About" },
     { href: "/blog", label: "Blog" },
     { href: "/contact", label: "Contact" },
   ];
