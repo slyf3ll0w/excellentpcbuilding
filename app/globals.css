@@ -95,3 +95,8 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+select option {
+  background-color: var(--card);
+  color: var(--foreground);
+}
