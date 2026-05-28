@@ -288,97 +288,77 @@ export const posts: Post[] = [
     slug: "gaming-pc-budget-guide-2025",
     title: "Gaming PC Budget Guide 2025: How Much to Spend at Every Tier",
     description:
-      "A practical guide to gaming PC performance tiers in 2025 — what $600, $900, $1,200, and $1,800 actually gets you, and which tier is right for how you play.",
+      "A practical guide to gaming PC performance tiers in 2025 — what $750–$1,300, $1,350–$1,900, and $2,000–$3,000 actually gets you, and which tier is right for how you play.",
     date: "2025-05-22",
     readTime: "8 min read",
     category: "Buying Guide",
     sections: [
       {
         type: "p",
-        text: "Choosing a budget for a gaming PC is one of the most common questions we hear. Spend too little and you'll be frustrated by the performance. Spend too much and you're paying for performance you'll never use. This guide breaks down what each budget tier actually delivers in 2025.",
+        text: "Choosing a budget for a gaming PC is one of the most common questions we hear. Spend too little and you'll be frustrated by the performance. Spend too much and you're paying for performance you'll never use. This guide breaks down what each budget tier actually delivers in 2025 based on builds we put together every day.",
       },
       {
         type: "h2",
-        text: "Tier 1: $500–$700 — Entry-Level Gaming",
+        text: "Entry Level: $750–$1,300",
       },
       {
         type: "p",
-        text: "At the $500–$700 range, you can build a PC that handles 1080p gaming at medium to high settings. This tier is right for players who primarily play online multiplayer games, popular esports titles, or games that are a few years old.",
+        text: "The entry-level range is a solid starting point for anyone getting into PC gaming. Builds in this tier are capable of hitting 1080p at medium to high settings with 120+ fps in the majority of games — which is a great experience on any 1080p monitor.",
       },
       {
         type: "p",
-        text: "What you typically get at this tier: a Ryzen 5 or Core i5 processor, an RX 7600 or RTX 4060 GPU, 16GB DDR5 RAM, and a 1TB NVMe SSD. Expect solid frame rates in Fortnite, Minecraft, Roblox, CS2, and similar games. Newer AAA titles will run at medium settings.",
+        text: "Most games will run comfortably, including online multiplayer titles, esports games, and a wide range of single-player titles. Where this tier starts to show its limits is with the most demanding AAA releases — think open-world games with heavy graphics at high or ultra settings. You may need to dial back a setting or two, but for the most part these builds hold up well.",
       },
       {
         type: "ul",
         items: [
-          "Best for: First-time PC gamers, younger players, budget-conscious households",
-          "Target resolution: 1080p",
-          "Weaknesses: Will struggle with demanding new AAA titles at high settings",
-          "Upgrade potential: Good — GPU can be upgraded in 2–3 years without replacing the whole system",
+          "Target performance: 1080p medium to high settings, 120+ fps",
+          "AAA games may require lowering some settings from high or ultra, but will still be very playable",
+          "Best for: First-time PC gamers, esports players, budget-conscious builds",
+          "Upgrade potential: Good — GPU can be swapped in a few years without replacing the whole system",
         ],
       },
       {
         type: "h2",
-        text: "Tier 2: $700–$1,000 — Mid-Range Sweet Spot",
+        text: "Mid Range: $1,350–$1,900",
       },
       {
         type: "p",
-        text: "The $700–$1,000 range is where most PC gamers land, and for good reason. This is the tier where you start seeing high-settings performance at 1080p and playable frame rates at 1440p in most games.",
+        text: "The mid-range tier is where things get genuinely impressive. Most builds in this range — especially toward the higher end — will deliver solid 120+ fps at 1440p with high to ultra settings across the vast majority of games released today.",
       },
       {
         type: "p",
-        text: "A strong $900 build in 2025 includes a Ryzen 7 or Core i5-14600K, an RTX 4060 Ti or RX 7700 XT GPU, 32GB DDR5 RAM, and a 1TB NVMe SSD. This machine will handle virtually every game released this year at high settings at 1080p, and holds up well at 1440p.",
+        text: "Builds on the lower end of this range may see some performance dips in the most demanding AAA titles at 1440p ultra, but will still be very playable and look great. This is the range we recommend most often for serious gamers who want a setup that stays relevant for several years.",
       },
       {
         type: "ul",
         items: [
-          "Best for: Dedicated gamers who want strong performance without overspending",
-          "Target resolution: 1080p high settings or 1440p medium-high",
-          "Weaknesses: Will start to show limitations at 1440p in the most demanding titles",
-          "Upgrade potential: Excellent — this platform supports GPU upgrades for years",
+          "Target performance: 1440p high to ultra settings, 120+ fps on most games",
+          "Lower-end builds in this range may dip below 120fps in the heaviest AAA titles at ultra — still very playable",
+          "Best for: Dedicated gamers who want strong 1440p performance without going all-out",
+          "Upgrade potential: Excellent — strong platform longevity",
         ],
       },
       {
         type: "h2",
-        text: "Tier 3: $1,000–$1,500 — High Performance",
+        text: "High End: $2,000–$3,000",
       },
       {
         type: "p",
-        text: "Spending $1,000–$1,500 gets you into genuinely high-performance territory. At this level, 1440p gaming at high settings is comfortable in nearly every game, and 4K gaming at medium settings becomes viable in less demanding titles.",
+        text: "The high-end tier is built for people who want top-tier performance and aren't willing to compromise. Builds in this range can run virtually any game at ultra settings at 1440p, and handle a wide variety of games at 4K on medium or high settings — with some titles even pushing into ultra at 4K with still-playable frame rates.",
       },
       {
         type: "p",
-        text: "A $1,200 build at this tier typically includes a Ryzen 7 7800X3D or Core i7-14700K, an RTX 4070 Super GPU, 32GB DDR5 RAM, and 2TB of NVMe storage. This system also handles content creation workloads well — Premiere, Lightroom, Blender at moderate complexity.",
+        text: "Builds toward the lower end of this range ($2,000–$2,300) may have some limitations at 4K high or ultra in the most demanding games, but they are still outstanding 1440p machines at high and ultra — and very capable at 4K medium. The upper end of this range removes most of those compromises entirely.",
       },
       {
         type: "ul",
         items: [
-          "Best for: Serious gamers, streamers, content creators who also game",
-          "Target resolution: 1440p high or 4K medium",
-          "Weaknesses: Still below the enthusiast ceiling at 4K ultra settings",
-          "Upgrade potential: Good — the CPU platform will support next-gen GPUs",
-        ],
-      },
-      {
-        type: "h2",
-        text: "Tier 4: $1,500–$2,500+ — Enthusiast",
-      },
-      {
-        type: "p",
-        text: "The enthusiast tier exists for people who want the best available performance regardless of diminishing returns — or for professional workloads that genuinely require top-end hardware.",
-      },
-      {
-        type: "p",
-        text: "A $2,000 enthusiast build in 2025 features a Ryzen 9 7950X or Core i9-14900K, an RTX 4080 Super or RX 7900 XTX GPU, 64GB DDR5 RAM, and fast multi-drive NVMe storage. At this level, 4K gaming at ultra settings is the baseline expectation, and the system handles professional video production, 3D rendering, and simulation workloads without complaint.",
-      },
-      {
-        type: "ul",
-        items: [
-          "Best for: Professional creators, 4K gamers, enthusiast hobbyists",
-          "Target resolution: 4K ultra, or high-refresh 1440p competitive gaming",
-          "Weaknesses: Steep cost-per-frame improvement over the tier below",
-          "Upgrade potential: Excellent for everything except the GPU, which you'd be replacing at a high cost anyway",
+          "Target performance: 1440p ultra in virtually everything; 4K medium to high in most games",
+          "Top-end builds in this range can push 4K ultra in many titles with playable frame rates",
+          "Lower-end builds may struggle at 4K high/ultra but are exceptional at 1440p and solid at 4K medium",
+          "Best for: Enthusiast gamers, content creators, anyone who wants to be set for years",
+          "Upgrade potential: Excellent — top-tier platform with room to grow",
         ],
       },
       {
@@ -387,15 +367,15 @@ export const posts: Post[] = [
       },
       {
         type: "p",
-        text: "Most people who come to us are best served by Tier 2 ($700–$1,000). It's the point where you stop noticing performance limitations in everyday gaming and get strong enough specs to last 4–5 years before an upgrade feels necessary.",
+        text: "If you're gaming on a 1080p monitor and mostly play online multiplayer or esports titles, the entry-level range is all you need and going higher would be wasted money. If you're on a 1440p monitor or planning to upgrade to one, the mid-range tier is the sweet spot — strong performance, great value, and plenty of longevity.",
       },
       {
         type: "p",
-        text: "If you're primarily playing esports games (Fortnite, Valorant, CS2), Tier 1 is plenty and you'd be wasting money going higher. If you're a content creator who games, Tier 3 makes sense. If you need 4K or do serious professional workloads, Tier 4 is justified.",
+        text: "The high-end range makes sense if you want 4K capability, you're a content creator who also games, or you simply want the best available and plan to keep the machine for a long time. It's a meaningful step up from mid-range, and you'll feel the difference.",
       },
       {
         type: "p",
-        text: "Still not sure? Tell us what games you play, what monitor you have, and what your budget is. We'll tell you exactly which tier fits and put together a specific parts list — for free.",
+        text: "Not sure where you fall? Tell us what games you play, what monitor you're using or planning to buy, and what your budget looks like. We'll point you to the right tier and put together a specific parts list — completely free.",
       },
     ],
   },
