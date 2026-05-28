@@ -64,7 +64,7 @@ const localBusinessSchema = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="antialiased">
+    <html lang="en" className="antialiased dark">
       <head>
         <script
           type="application/ld+json"

@@ -28,9 +28,8 @@ export function Header() {
   ];
 
   return (
-    <header className={`bg-[#060B16]/95 backdrop-blur-md border-b border-[#1A2840] sticky top-0 z-50 transition-transform duration-300 ${visible ? "translate-y-0" : "-translate-y-full"}`}>
+    <header className={`bg-background/95 backdrop-blur-md border-b border-border sticky top-0 z-50 transition-transform duration-300 ${visible ? "translate-y-0" : "-translate-y-full"}`}>
       <div className="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between">
-        {/* Logo */}
         <Link href="/" className="flex items-center group">
           <Image
             src="/logo.png"
@@ -47,10 +46,10 @@ export function Header() {
             <Link
               key={l.href}
               href={l.href}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+              className={`px-4 py-2 text-sm font-medium transition-colors ${
                 pathname.startsWith(l.href)
-                  ? "text-white bg-[#0070FF]/15 text-[#0070FF]"
-                  : "text-gray-400 hover:text-white hover:bg-white/5"
+                  ? "text-foreground bg-card"
+                  : "text-muted-foreground hover:text-foreground hover:bg-card"
               }`}
             >
               {l.label}
@@ -61,20 +60,19 @@ export function Header() {
         <div className="flex items-center gap-3">
           <a
             href="tel:4173197589"
-            className="text-[#60a5fa] font-semibold text-sm hidden sm:block hover:text-white transition-colors"
+            className="text-primary font-semibold text-sm hidden sm:block hover:text-foreground transition-colors"
           >
             (417) 319-7589
           </a>
           <Link
             href="/contact"
-            className="bg-[#0070FF] hover:bg-[#0058CC] text-white font-semibold px-5 py-2 rounded-lg text-sm transition-colors hidden sm:block"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-5 py-2 text-sm transition-colors hidden sm:block"
           >
             Get a Quote
           </Link>
-          {/* Mobile hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 text-gray-400 hover:text-white transition-colors"
+            className="md:hidden p-2 text-muted-foreground hover:text-foreground transition-colors"
             aria-label="Toggle menu"
           >
             {mobileOpen ? (
@@ -90,29 +88,28 @@ export function Header() {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-[#1A2840] bg-[#0D1626] px-5 py-4 flex flex-col gap-1">
+        <div className="md:hidden border-t border-border bg-card px-5 py-4 flex flex-col gap-1">
           {navLinks.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               onClick={() => setMobileOpen(false)}
-              className="py-3 px-4 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors font-medium text-sm"
+              className="py-3 px-4 text-muted-foreground hover:text-foreground hover:bg-muted transition-colors font-medium text-sm"
             >
               {l.label}
             </Link>
           ))}
           <a
             href="tel:4173197589"
-            className="py-3 px-4 rounded-lg text-[#60a5fa] font-semibold text-sm"
+            className="py-3 px-4 text-primary font-semibold text-sm"
           >
             (417) 319-7589
           </a>
           <Link
             href="/contact"
             onClick={() => setMobileOpen(false)}
-            className="mt-2 bg-[#0070FF] text-white font-semibold px-4 py-3 rounded-lg text-sm text-center transition-colors hover:bg-[#0058CC]"
+            className="mt-2 bg-primary text-primary-foreground font-semibold px-4 py-3 text-sm text-center transition-colors hover:bg-primary/90"
           >
             Get a Quote
           </Link>

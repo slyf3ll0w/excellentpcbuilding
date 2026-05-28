@@ -11,13 +11,13 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#0f172a] pt-16 pb-14">
+      <section className="bg-card border-b border-border pt-16 pb-14">
         <div className="max-w-4xl mx-auto px-5">
-          <p className="text-[#0070FF] text-xs font-semibold uppercase tracking-widest mb-3">Get in Touch</p>
-          <h1 className="text-4xl font-bold text-white tracking-tight mb-4">
+          <p className="text-primary text-xs font-semibold uppercase tracking-widest mb-3">Get in Touch</p>
+          <h1 className="text-4xl font-bold text-foreground tracking-tight mb-4">
             Request a Free Quote
           </h1>
-          <p className="text-white/65 leading-relaxed max-w-xl">
+          <p className="text-muted-foreground leading-relaxed max-w-xl">
             Ready to get your custom PC built? Tell us about your project and budget and we&apos;ll
             put together a detailed quote — usually within a few hours.
           </p>
@@ -25,7 +25,7 @@ export default function ContactPage() {
       </section>
 
       {/* Content */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-background">
         <div className="max-w-6xl mx-auto px-5">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
             {/* Left: info */}
@@ -70,22 +70,22 @@ export default function ContactPage() {
                   },
                 ].map((item) => (
                   <div key={item.title} className="flex gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-[#0070FF]/10 text-[#0070FF] flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
                       {item.icon}
                     </div>
                     <div>
-                      <p className="text-slate-800 font-semibold text-sm mb-1">{item.title}</p>
-                      <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+                      <p className="text-foreground font-semibold text-sm mb-1">{item.title}</p>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="bg-slate-50 border border-gray-200 rounded-xl p-5">
-                <p className="text-xs text-slate-400 uppercase tracking-widest font-semibold mb-2">Email Us Directly</p>
+              <div className="bg-muted border border-border p-5">
+                <p className="text-xs text-muted-foreground uppercase tracking-widest font-semibold mb-2">Email Us Directly</p>
                 <a
                   href="mailto:excellentpcbuilding@gmail.com"
-                  className="text-[#0070FF] hover:underline font-medium"
+                  className="text-primary hover:underline font-medium"
                 >
                   excellentpcbuilding@gmail.com
                 </a>
@@ -93,7 +93,7 @@ export default function ContactPage() {
             </div>
 
             {/* Right: form */}
-            <div className="bg-white border border-gray-200 rounded-xl p-7 sm:p-8 shadow-sm">
+            <div className="bg-card border border-border p-7 sm:p-8">
               <ContactForm />
             </div>
           </div>

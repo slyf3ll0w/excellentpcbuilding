@@ -96,38 +96,38 @@ export default function HomePage() {
           backgroundPosition: "center 35%",
         }}
       >
-        <div className="absolute inset-0 bg-[#080c18]/78" />
+        <div className="absolute inset-0 bg-background/82" />
         <div className="relative max-w-5xl mx-auto px-5">
-          <p className="inline-block bg-white/10 border border-white/20 text-white/85 text-sm font-medium px-4 py-1.5 rounded-full mb-6 tracking-wide">
+          <p className="inline-block bg-card border border-border text-muted-foreground text-sm font-medium px-4 py-1.5 mb-6 tracking-wide">
             Springfield, Missouri&apos;s Custom PC Experts
           </p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight mb-5">
-            Professional <span className="text-blue-300">PC Building</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight tracking-tight mb-5">
+            Professional <span className="text-primary">PC Building</span>
             <br />
             You Can Trust
           </h1>
-          <p className="text-white/70 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
+          <p className="text-muted-foreground text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
             Expert assembly, cable management, and stress testing for gamers, creators, and businesses
             across Southwest Missouri.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
               href="/contact"
-              className="bg-[#0070FF] hover:bg-[#0058CC] text-white font-semibold px-8 py-4 rounded-lg text-base transition-all"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-4 text-base transition-all"
             >
               Get a Free Quote
             </Link>
             <Link
               href="#services"
-              className="border-2 border-white/30 hover:border-white/60 text-white/85 hover:text-white font-semibold px-8 py-4 rounded-lg text-base transition-all"
+              className="border border-border hover:border-foreground/40 text-muted-foreground hover:text-foreground font-semibold px-8 py-4 text-base transition-all"
             >
               View Services
             </Link>
           </div>
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-8 pt-8 border-t border-white/12">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-8 pt-8 border-t border-border">
             {["14 Cities Served", "Gaming & Workstation Builds", "90-Day Guarantee", "Based in Springfield, MO"].map(
               (s) => (
-                <span key={s} className="text-sm text-white/55 font-medium">
+                <span key={s} className="text-sm text-muted-foreground font-medium">
                   {s}
                 </span>
               )
@@ -137,15 +137,11 @@ export default function HomePage() {
       </section>
 
       {/* ── SERVICES ─────────────────────────────────────────── */}
-      <section id="services" className="py-24 bg-white">
+      <section id="services" className="py-24 bg-background">
         <div className="max-w-6xl mx-auto px-5">
           <div className="text-center mb-14">
-            <p className="flex items-center justify-center gap-2 text-[#0070FF] text-xs font-semibold uppercase tracking-widest mb-3">
-              <span className="block w-4 h-0.5 bg-[#0070FF]" />
-              What We Do
-              <span className="block w-4 h-0.5 bg-[#0070FF]" />
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 tracking-tight">
+            <p className="text-primary text-xs font-semibold uppercase tracking-widest mb-3">What We Do</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight">
               Two ways we can help you
             </h2>
           </div>
@@ -154,7 +150,7 @@ export default function HomePage() {
             {SERVICES.map((svc, i) => (
               <div
                 key={svc.slug}
-                className="group bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                className="group bg-card border border-border overflow-hidden"
               >
                 <div className="relative h-52 overflow-hidden">
                   <Image
@@ -169,15 +165,15 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="p-7">
-                  <span className="inline-block bg-[#0070FF]/10 text-[#0070FF] text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
+                  <span className="inline-block bg-primary/15 text-primary text-xs font-bold uppercase tracking-wider px-3 py-1 mb-4">
                     {svc.shortName}
                   </span>
-                  <h3 className="text-lg font-bold text-slate-800 mb-2">{svc.title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed mb-5">{svc.tagline}</p>
+                  <h3 className="text-lg font-bold text-foreground mb-2">{svc.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-5">{svc.tagline}</p>
                   <ul className="space-y-2 mb-6">
                     {svc.benefits.slice(0, 3).map((b) => (
-                      <li key={b} className="flex items-start gap-2 text-sm text-slate-500">
-                        <svg className="w-4 h-4 text-[#0070FF] mt-0.5 flex-shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <li key={b} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <svg className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M2 8l3.5 3.5L14 3.5" />
                         </svg>
                         {b}
@@ -186,7 +182,7 @@ export default function HomePage() {
                   </ul>
                   <Link
                     href={`/services/${svc.slug}`}
-                    className="inline-flex items-center gap-2 text-[#0070FF] hover:text-[#0058CC] font-semibold text-sm transition-colors"
+                    className="inline-flex items-center gap-2 text-primary hover:text-foreground font-semibold text-sm transition-colors"
                   >
                     Learn more
                     <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -201,15 +197,11 @@ export default function HomePage() {
       </section>
 
       {/* ── WHY US ───────────────────────────────────────────── */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-24 bg-muted">
         <div className="max-w-6xl mx-auto px-5">
           <div className="text-center mb-14">
-            <p className="flex items-center justify-center gap-2 text-[#0070FF] text-xs font-semibold uppercase tracking-widest mb-3">
-              <span className="block w-4 h-0.5 bg-[#0070FF]" />
-              Why Choose Us
-              <span className="block w-4 h-0.5 bg-[#0070FF]" />
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 tracking-tight">
+            <p className="text-primary text-xs font-semibold uppercase tracking-widest mb-3">Why Choose Us</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight">
               Built right. Backed by us.
             </h2>
           </div>
@@ -217,13 +209,13 @@ export default function HomePage() {
             {whyUs.map((item) => (
               <div
                 key={item.title}
-                className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-card border border-border p-6"
               >
-                <div className="w-11 h-11 rounded-lg bg-[#0070FF]/10 text-[#0070FF] flex items-center justify-center mb-4">
+                <div className="w-11 h-11 bg-primary/15 text-primary flex items-center justify-center mb-4">
                   {item.icon}
                 </div>
-                <h3 className="font-semibold text-slate-800 text-base mb-2">{item.title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+                <h3 className="font-semibold text-foreground text-base mb-2">{item.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -231,27 +223,23 @@ export default function HomePage() {
       </section>
 
       {/* ── TESTIMONIALS ─────────────────────────────────────── */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-background">
         <div className="max-w-6xl mx-auto px-5">
           <div className="text-center mb-14">
-            <p className="flex items-center justify-center gap-2 text-[#0070FF] text-xs font-semibold uppercase tracking-widest mb-3">
-              <span className="block w-4 h-0.5 bg-[#0070FF]" />
-              Customer Reviews
-              <span className="block w-4 h-0.5 bg-[#0070FF]" />
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 tracking-tight">
+            <p className="text-primary text-xs font-semibold uppercase tracking-widest mb-3">Customer Reviews</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight">
               Don&apos;t just take our word for it
             </h2>
-            <p className="text-slate-500 mt-3">Real feedback from customers across Southwest Missouri.</p>
+            <p className="text-muted-foreground mt-3">Real feedback from customers across Southwest Missouri.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((r) => (
-              <div key={r.name} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+              <div key={r.name} className="bg-card border border-border p-6">
                 <div className="text-amber-400 text-lg mb-3 tracking-wide">★★★★★</div>
-                <p className="text-slate-600 text-sm leading-relaxed italic mb-5">&ldquo;{r.text}&rdquo;</p>
+                <p className="text-muted-foreground text-sm leading-relaxed italic mb-5">&ldquo;{r.text}&rdquo;</p>
                 <div>
-                  <p className="font-semibold text-slate-800 text-sm">{r.name}</p>
-                  <p className="text-slate-500 text-xs mt-0.5">{r.city}</p>
+                  <p className="font-semibold text-foreground text-sm">{r.name}</p>
+                  <p className="text-muted-foreground text-xs mt-0.5">{r.city}</p>
                 </div>
               </div>
             ))}
@@ -269,18 +257,18 @@ export default function HomePage() {
             className="object-cover"
           />
         </div>
-        <div className="bg-[#0070FF] flex items-center justify-center px-10 py-12">
+        <div className="bg-primary flex items-center justify-center px-10 py-12">
           <div>
-            <p className="text-blue-200 text-xs font-semibold uppercase tracking-widest mb-3">Ready to Build?</p>
-            <h2 className="text-3xl font-bold text-white mb-4 leading-tight">
+            <p className="text-primary-foreground/60 text-xs font-semibold uppercase tracking-widest mb-3">Ready to Build?</p>
+            <h2 className="text-3xl font-bold text-primary-foreground mb-4 leading-tight">
               Get your custom PC<br />quote today — free.
             </h2>
-            <p className="text-blue-100/80 text-sm mb-7 leading-relaxed">
+            <p className="text-primary-foreground/70 text-sm mb-7 leading-relaxed">
               Tell us what you need and your budget. We&apos;ll respond within a few hours with a detailed quote.
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-white text-[#0070FF] font-bold px-7 py-3.5 rounded-lg text-sm hover:bg-blue-50 transition-colors"
+              className="inline-block bg-background text-foreground font-bold px-7 py-3.5 text-sm hover:bg-muted transition-colors"
             >
               Request a Quote
             </Link>
@@ -289,18 +277,14 @@ export default function HomePage() {
       </section>
 
       {/* ── SERVICE AREAS ────────────────────────────────────── */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-24 bg-muted">
         <div className="max-w-6xl mx-auto px-5">
           <div className="text-center mb-14">
-            <p className="flex items-center justify-center gap-2 text-[#0070FF] text-xs font-semibold uppercase tracking-widest mb-3">
-              <span className="block w-4 h-0.5 bg-[#0070FF]" />
-              Where We Serve
-              <span className="block w-4 h-0.5 bg-[#0070FF]" />
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 tracking-tight">
+            <p className="text-primary text-xs font-semibold uppercase tracking-widest mb-3">Where We Serve</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight">
               Serving Southwest Missouri
             </h2>
-            <p className="text-slate-500 mt-3 max-w-xl mx-auto">
+            <p className="text-muted-foreground mt-3 max-w-xl mx-auto">
               Based in Springfield, we serve communities across the region. Click your city for local service info.
             </p>
           </div>
@@ -309,13 +293,13 @@ export default function HomePage() {
               <Link
                 key={city.slug}
                 href={`/services/pc-build/${city.slug}`}
-                className="bg-white border border-gray-200 rounded-lg p-4 text-center hover:border-[#0070FF] hover:shadow-sm transition-all group"
+                className="bg-card border border-border p-4 text-center hover:border-primary transition-all group"
               >
-                <svg className="w-5 h-5 text-[#0070FF]/40 group-hover:text-[#0070FF] mx-auto mb-2 transition-colors" viewBox="0 0 20 20" fill="currentColor">
+                <svg className="w-5 h-5 text-primary/40 group-hover:text-primary mx-auto mb-2 transition-colors" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                 </svg>
-                <p className="text-slate-700 text-xs font-semibold">{city.name}</p>
-                <p className="text-slate-400 text-[10px]">MO</p>
+                <p className="text-foreground text-xs font-semibold">{city.name}</p>
+                <p className="text-muted-foreground text-[10px]">MO</p>
               </Link>
             ))}
           </div>
@@ -323,22 +307,18 @@ export default function HomePage() {
       </section>
 
       {/* ── CONTACT ──────────────────────────────────────────── */}
-      <section id="contact" className="py-24 bg-white">
+      <section id="contact" className="py-24 bg-background">
         <div className="max-w-2xl mx-auto px-5">
           <div className="text-center mb-10">
-            <p className="flex items-center justify-center gap-2 text-[#0070FF] text-xs font-semibold uppercase tracking-widest mb-3">
-              <span className="block w-4 h-0.5 bg-[#0070FF]" />
-              Get Started
-              <span className="block w-4 h-0.5 bg-[#0070FF]" />
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 tracking-tight mb-3">
+            <p className="text-primary text-xs font-semibold uppercase tracking-widest mb-3">Get Started</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight mb-3">
               Request a Free Quote
             </h2>
-            <p className="text-slate-500">
+            <p className="text-muted-foreground">
               Fill out the form and we&apos;ll get back to you within a few hours with pricing and next steps.
             </p>
           </div>
-          <div className="bg-white border border-gray-200 rounded-xl p-7 sm:p-10 shadow-sm">
+          <div className="bg-card border border-border p-7 sm:p-10">
             <ContactForm />
           </div>
         </div>
