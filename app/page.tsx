@@ -219,7 +219,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16">
             {whyUs.map((item, i) => (
               <div key={item.title} className="flex gap-6 py-7 border-b border-border last:border-b-0 md:[&:nth-last-child(2)]:border-b-0 group">
-                <span className="text-4xl font-bold text-primary/20 group-hover:text-primary/40 transition-colors leading-none flex-shrink-0 w-12 text-right">
+                <span className="text-4xl font-bold text-primary/60 group-hover:text-primary/90 transition-colors leading-none flex-shrink-0 w-12 text-right">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div className="pt-0.5">

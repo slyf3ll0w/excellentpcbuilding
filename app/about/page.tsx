@@ -146,7 +146,7 @@ export default function AboutPage() {
           <div>
             {values.map((v, i) => (
               <div key={v.title} className="flex gap-8 py-8 border-b border-border last:border-b-0 group">
-                <span className="text-5xl font-bold text-primary/20 group-hover:text-primary/40 transition-colors leading-none flex-shrink-0 w-16 text-right">
+                <span className="text-5xl font-bold text-primary/60 group-hover:text-primary/90 transition-colors leading-none flex-shrink-0 w-16 text-right">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div className="pt-1">
