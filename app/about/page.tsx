@@ -82,8 +82,8 @@ export default function AboutPage() {
                 priority
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/80 to-transparent p-6">
-                <p className="text-foreground font-bold text-lg">Brendan</p>
-                <p className="text-primary text-sm font-semibold">Owner — Excellent PC Building</p>
+                <p className="text-white font-bold text-lg">Brendan</p>
+                <p className="text-white/80 text-sm font-semibold">Owner — Excellent PC Building</p>
               </div>
             </div>
 
@@ -104,7 +104,7 @@ export default function AboutPage() {
                 configured system ready to use out of the box.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Born and raised in the Springfield area, Brendan started Excellent PC Building to serve
+                Raised in the Springfield area, Brendan started Excellent PC Building to serve
                 his community. He&apos;s built gaming rigs, workstations, video editing machines, and
                 budget-friendly everyday PCs for customers across Southwest Missouri. Each one gets
                 the same level of care and attention.

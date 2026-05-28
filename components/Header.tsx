@@ -50,16 +50,16 @@ export function Header() {
 
       {/* ── Row 2: Logo + contact + CTA ─────────────────────── */}
       <div className="bg-background border-b border-border">
-        <div className="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between gap-4">
+        <div className="max-w-6xl mx-auto px-5 py-1 flex items-center justify-between gap-4">
 
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
               src="/logo.png"
               alt="Excellent PC Building"
-              width={133}
-              height={133}
-              className="w-[133px] h-[133px] object-contain"
+              width={155}
+              height={155}
+              className="w-[155px] h-[155px] object-contain"
             />
           </Link>
 
