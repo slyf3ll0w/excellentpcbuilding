@@ -31,7 +31,7 @@ export function Header() {
   ];
 
   return (
-    <header className={`sticky top-0 z-50 transition-transform duration-300 ${visible ? "translate-y-0" : "-translate-y-full"}`}>
+    <header className={`sticky top-0 z-[1001] transition-transform duration-300 ${visible ? "translate-y-0" : "-translate-y-full"}`}>
 
       {/* ── Row 1: Top info bar ──────────────────────────────── */}
       <div className="bg-muted border-b border-border">

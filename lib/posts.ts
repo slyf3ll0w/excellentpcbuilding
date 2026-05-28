@@ -288,7 +288,7 @@ export const posts: Post[] = [
     slug: "gaming-pc-budget-guide-2025",
     title: "Gaming PC Budget Guide 2025: How Much to Spend at Every Tier",
     description:
-      "A practical guide to gaming PC performance tiers in 2025 — what $750–$1,300, $1,350–$1,900, and $2,000–$3,000 actually gets you, and which tier is right for how you play.",
+      "A practical guide to gaming PC performance tiers in 2025 — what $800–$1,400, $1,500–$2,400, and $2,500–$3,500 actually gets you, and which tier is right for how you play.",
     date: "2025-05-22",
     readTime: "8 min read",
     category: "Buying Guide",
@@ -299,7 +299,7 @@ export const posts: Post[] = [
       },
       {
         type: "h2",
-        text: "Entry Level: $750–$1,300",
+        text: "Entry Level: $800–$1,400",
       },
       {
         type: "p",
@@ -320,7 +320,7 @@ export const posts: Post[] = [
       },
       {
         type: "h2",
-        text: "Mid Range: $1,350–$1,900",
+        text: "Mid Range: $1,500–$2,400",
       },
       {
         type: "p",
@@ -341,7 +341,7 @@ export const posts: Post[] = [
       },
       {
         type: "h2",
-        text: "High End: $2,000–$3,000",
+        text: "High End: $2,500–$3,500",
       },
       {
         type: "p",
@@ -367,11 +367,11 @@ export const posts: Post[] = [
       },
       {
         type: "p",
-        text: "If you're gaming on a 1080p monitor and mostly play online multiplayer or esports titles, the entry-level range is all you need and going higher would be wasted money. If you're on a 1440p monitor or planning to upgrade to one, the mid-range tier is the sweet spot — strong performance, great value, and plenty of longevity.",
+        text: "If you're gaming on a 1080p monitor and mostly play online multiplayer or esports titles, the entry-level range ($800–$1,400) is all you need and going higher would be wasted money. If you're on a 1440p monitor or planning to upgrade to one, the mid-range tier ($1,500–$2,400) is the sweet spot — strong performance, great value, and plenty of longevity.",
       },
       {
         type: "p",
-        text: "The high-end range makes sense if you want 4K capability, you're a content creator who also games, or you simply want the best available and plan to keep the machine for a long time. It's a meaningful step up from mid-range, and you'll feel the difference.",
+        text: "The high-end range ($2,500–$3,500) makes sense if you want 4K capability, you're a content creator who also games, or you simply want the best available and plan to keep the machine for a long time. It's a meaningful step up from mid-range, and you'll feel the difference.",
       },
       {
         type: "p",
