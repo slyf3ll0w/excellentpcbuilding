@@ -23,9 +23,9 @@ export function Header() {
           <Image
             src="/logo.png"
             alt="Excellent PC Building"
-            width={400}
-            height={400}
-            className="w-[400px] h-[400px] object-contain"
+            width={133}
+            height={133}
+            className="w-[133px] h-[133px] object-contain"
           />
         </Link>
 
@@ -47,6 +47,12 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
+          <a
+            href="tel:4173197589"
+            className="text-[#60a5fa] font-semibold text-sm hidden sm:block hover:text-white transition-colors"
+          >
+            (417) 319-7589
+          </a>
           <Link
             href="/contact"
             className="bg-[#0070FF] hover:bg-[#0058CC] text-white font-semibold px-5 py-2 rounded-lg text-sm transition-colors hidden sm:block"
@@ -85,6 +91,12 @@ export function Header() {
               {l.label}
             </Link>
           ))}
+          <a
+            href="tel:4173197589"
+            className="py-3 px-4 rounded-lg text-[#60a5fa] font-semibold text-sm"
+          >
+            (417) 319-7589
+          </a>
           <Link
             href="/contact"
             onClick={() => setMobileOpen(false)}
