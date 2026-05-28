@@ -100,3 +100,11 @@ select option {
   background-color: var(--card);
   color: var(--foreground);
 }
+
+/* Subtle circuit board pattern on all section backgrounds */
+.bg-background,
+.bg-card,
+.bg-muted {
+  background-image: url('/circuit-bg.svg');
+  background-size: 160px 160px;
+}
