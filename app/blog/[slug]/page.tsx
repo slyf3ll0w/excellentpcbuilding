@@ -61,22 +61,22 @@ export default async function BlogPostPage({ params }: Props) {
       />
 
       {/* Hero */}
-      <section className="bg-[#0f172a] pt-16 pb-14">
+      <section className="bg-card border-b border-border pt-16 pb-14">
         <div className="max-w-3xl mx-auto px-5">
-          <div className="flex flex-wrap gap-2 mb-6 text-sm text-white/50">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+          <div className="flex flex-wrap gap-2 mb-6 text-sm text-muted-foreground">
+            <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
+            <Link href="/blog" className="hover:text-foreground transition-colors">Blog</Link>
             <span>/</span>
-            <span className="text-white/85 truncate">{post.title}</span>
+            <span className="text-foreground truncate">{post.title}</span>
           </div>
-          <span className="inline-block bg-white/10 border border-white/18 text-white/85 text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-5">
+          <span className="inline-block bg-primary/15 border border-primary/30 text-primary text-xs font-semibold uppercase tracking-wider px-3 py-1 mb-5">
             {post.category}
           </span>
-          <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight tracking-tight mb-5">
+          <h1 className="text-3xl sm:text-4xl font-bold text-foreground leading-tight tracking-tight mb-5">
             {post.title}
           </h1>
-          <div className="flex items-center gap-3 text-white/45 text-sm">
+          <div className="flex items-center gap-3 text-muted-foreground text-sm">
             <span>
               {new Date(post.date).toLocaleDateString("en-US", {
                 month: "long",
@@ -93,27 +93,27 @@ export default async function BlogPostPage({ params }: Props) {
       </section>
 
       {/* Article body */}
-      <section className="py-14 bg-white">
+      <section className="py-14 bg-background">
         <div className="max-w-3xl mx-auto px-5">
-          <div className="prose prose-slate max-w-none">
+          <div className="max-w-none">
             {post.sections.map((section, i) => {
               if (section.type === "p") {
                 return (
-                  <p key={i} className="text-slate-600 leading-relaxed mb-5">
+                  <p key={i} className="text-muted-foreground leading-relaxed mb-5">
                     {section.text}
                   </p>
                 );
               }
               if (section.type === "h2") {
                 return (
-                  <h2 key={i} className="text-2xl font-bold text-slate-800 mt-10 mb-4">
+                  <h2 key={i} className="text-2xl font-bold text-foreground mt-10 mb-4">
                     {section.text}
                   </h2>
                 );
               }
               if (section.type === "h3") {
                 return (
-                  <h3 key={i} className="text-lg font-semibold text-slate-800 mt-7 mb-3">
+                  <h3 key={i} className="text-lg font-semibold text-foreground mt-7 mb-3">
                     {section.text}
                   </h3>
                 );
@@ -122,8 +122,8 @@ export default async function BlogPostPage({ params }: Props) {
                 return (
                   <ul key={i} className="space-y-3 mb-6">
                     {section.items.map((item, j) => (
-                      <li key={j} className="flex items-start gap-3 text-slate-600 text-sm leading-relaxed">
-                        <svg className="w-4 h-4 text-[#0070FF] mt-0.5 flex-shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <li key={j} className="flex items-start gap-3 text-muted-foreground text-sm leading-relaxed">
+                        <svg className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M2 8l3.5 3.5L14 3.5" />
                         </svg>
                         {item}
@@ -136,8 +136,8 @@ export default async function BlogPostPage({ params }: Props) {
                 return (
                   <ol key={i} className="space-y-3 mb-6">
                     {section.items.map((item, j) => (
-                      <li key={j} className="flex items-start gap-3 text-slate-600 text-sm leading-relaxed">
-                        <span className="w-6 h-6 rounded-full bg-[#0070FF]/10 text-[#0070FF] text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <li key={j} className="flex items-start gap-3 text-muted-foreground text-sm leading-relaxed">
+                        <span className="w-6 h-6 bg-primary/15 text-primary text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
                           {j + 1}
                         </span>
                         {item}
@@ -151,18 +151,18 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
 
           {/* CTA */}
-          <div className="mt-12 bg-slate-50 border border-gray-200 rounded-xl p-7">
-            <p className="text-[#0070FF] text-xs font-semibold uppercase tracking-widest mb-2">Excellent PC Building</p>
-            <h3 className="text-xl font-bold text-slate-800 mb-2">Ready to build? We serve {" "}
-              <Link href="/services/pc-build/springfield" className="text-[#0070FF] hover:underline">Springfield</Link>
+          <div className="mt-12 bg-muted border border-border p-7">
+            <p className="text-primary text-xs font-semibold uppercase tracking-widest mb-2">Excellent PC Building</p>
+            <h3 className="text-xl font-bold text-foreground mb-2">Ready to build? We serve{" "}
+              <Link href="/services/pc-build/springfield" className="text-primary hover:underline">Springfield</Link>
               {" "}and all of Southwest Missouri.
             </h3>
-            <p className="text-slate-500 text-sm mb-5">
+            <p className="text-muted-foreground text-sm mb-5">
               Get a free custom quote — we respond within a few hours during business hours.
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-[#0070FF] hover:bg-[#0058CC] text-white font-semibold px-6 py-3 rounded-lg transition-colors text-sm"
+              className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-3 transition-colors text-sm"
             >
               Get a Free Quote
             </Link>
@@ -172,23 +172,23 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* Related posts */}
       {otherPosts.length > 0 && (
-        <section className="py-14 bg-slate-50 border-t border-gray-200">
+        <section className="py-14 bg-muted border-t border-border">
           <div className="max-w-3xl mx-auto px-5">
-            <h2 className="text-lg font-bold text-slate-800 mb-6">More from the blog</h2>
+            <h2 className="text-lg font-bold text-foreground mb-6">More from the blog</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {otherPosts.map((p) => (
                 <Link
                   key={p.slug}
                   href={`/blog/${p.slug}`}
-                  className="group bg-white border border-gray-200 rounded-xl p-5 hover:border-[#0070FF]/30 hover:shadow-sm transition-all"
+                  className="group bg-card border border-border p-5 hover:border-primary transition-all"
                 >
-                  <span className="text-[#0070FF] text-xs font-semibold uppercase tracking-wider">
+                  <span className="text-primary text-xs font-semibold uppercase tracking-wider">
                     {p.category}
                   </span>
-                  <h3 className="text-sm font-semibold text-slate-800 mt-2 leading-snug group-hover:text-[#0070FF] transition-colors">
+                  <h3 className="text-sm font-semibold text-foreground mt-2 leading-snug group-hover:text-primary transition-colors">
                     {p.title}
                   </h3>
-                  <p className="text-slate-400 text-xs mt-2">{p.readTime}</p>
+                  <p className="text-muted-foreground text-xs mt-2">{p.readTime}</p>
                 </Link>
               ))}
             </div>

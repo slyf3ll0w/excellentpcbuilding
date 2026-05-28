@@ -57,23 +57,23 @@ export default async function CityPartsAndBuildPage({ params }: Props) {
       />
 
       {/* Hero */}
-      <section className="bg-[#0f172a] pt-16 pb-20">
+      <section className="bg-card border-b border-border pt-16 pb-20">
         <div className="max-w-4xl mx-auto px-5">
-          <div className="flex flex-wrap gap-2 mb-6 text-sm text-white/50">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+          <div className="flex flex-wrap gap-2 mb-6 text-sm text-muted-foreground">
+            <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/services/parts-and-build" className="hover:text-white transition-colors">Parts + Build</Link>
+            <Link href="/services/parts-and-build" className="hover:text-foreground transition-colors">Parts + Build</Link>
             <span>/</span>
-            <span className="text-white/85">{city.name}</span>
+            <span className="text-foreground">{city.name}</span>
           </div>
-          <span className="inline-block bg-white/10 border border-white/18 text-white/85 text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-5">
+          <span className="inline-block bg-primary/15 border border-primary/30 text-primary text-xs font-semibold uppercase tracking-wider px-3 py-1 mb-5">
             {city.name}, MO
           </span>
-          <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-tight mb-5">
+          <h1 className="text-4xl sm:text-5xl font-bold text-foreground tracking-tight leading-tight mb-5">
             Parts &amp; Build Service in<br />
-            <span className="text-blue-300">{city.name}, Missouri</span>
+            <span className="text-primary">{city.name}, Missouri</span>
           </h1>
-          <p className="text-white/65 text-lg leading-relaxed max-w-2xl mb-8">
+          <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl mb-8">
             Serving {city.name} residents who want a custom PC but don&apos;t know where to start. We&apos;ll
             consult with you, source the best parts for your budget, and build a machine tailored to exactly
             how you use it.
@@ -81,13 +81,13 @@ export default async function CityPartsAndBuildPage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="#quote"
-              className="inline-flex items-center justify-center bg-[#0070FF] hover:bg-[#0058CC] text-white font-semibold px-8 py-4 rounded-lg transition-all"
+              className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-4 transition-all"
             >
               Start My Build in {city.name}
             </Link>
             <Link
               href="/services/parts-and-build"
-              className="inline-flex items-center justify-center border border-white/20 hover:border-white/40 text-white/70 hover:text-white font-semibold px-8 py-4 rounded-lg transition-all"
+              className="inline-flex items-center justify-center border border-border hover:border-foreground/40 text-muted-foreground hover:text-foreground font-semibold px-8 py-4 transition-all"
             >
               About This Service
             </Link>
@@ -96,33 +96,33 @@ export default async function CityPartsAndBuildPage({ params }: Props) {
       </section>
 
       {/* City-specific context */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-5">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-2xl font-bold text-slate-800 mb-4">
+              <h2 className="text-2xl font-bold text-foreground mb-4">
                 Custom PC Builds in {city.name}
               </h2>
-              <p className="text-slate-600 leading-relaxed mb-4">{city.blurb}</p>
-              <p className="text-slate-500 text-sm leading-relaxed">{city.about}</p>
+              <p className="text-muted-foreground leading-relaxed mb-4">{city.blurb}</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">{city.about}</p>
             </div>
             <div>
-              <h3 className="text-sm font-semibold text-slate-700 uppercase tracking-widest mb-4">
+              <h3 className="text-sm font-semibold text-foreground uppercase tracking-widest mb-4">
                 Popular Builds in {city.name}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {city.popularBuilds.map((b) => (
                   <span
                     key={b}
-                    className="bg-slate-50 border border-gray-200 text-slate-600 text-sm font-medium px-4 py-2 rounded-lg"
+                    className="bg-muted border border-border text-muted-foreground text-sm font-medium px-4 py-2"
                   >
                     {b}
                   </span>
                 ))}
               </div>
-              <div className="mt-8 bg-slate-50 border border-gray-200 rounded-xl p-5">
-                <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-2">Parts + Build Service</p>
-                <p className="text-slate-600 text-sm leading-relaxed">
+              <div className="mt-8 bg-muted border border-border p-5">
+                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-2">Parts + Build Service</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   We handle everything — parts consultation, sourcing, assembly, BIOS setup, and stress testing.
                   You approve the parts list before we order anything.
                 </p>
@@ -133,9 +133,9 @@ export default async function CityPartsAndBuildPage({ params }: Props) {
       </section>
 
       {/* Why choose us */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-muted">
         <div className="max-w-4xl mx-auto px-5">
-          <h2 className="text-2xl font-bold text-slate-800 mb-8">
+          <h2 className="text-2xl font-bold text-foreground mb-8">
             Full-Service PC Builds for {city.name} Residents
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
@@ -153,10 +153,10 @@ export default async function CityPartsAndBuildPage({ params }: Props) {
                 desc: "Windows installed, drivers configured, and everything tested. Plug it in and get to work.",
               },
             ].map((item) => (
-              <div key={item.title} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
-                <div className="w-2 h-2 rounded-full bg-[#0070FF] mb-3" />
-                <h3 className="text-slate-800 font-semibold text-sm mb-2">{item.title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+              <div key={item.title} className="bg-card border border-border p-5">
+                <div className="w-2 h-2 bg-primary mb-3" />
+                <h3 className="text-foreground font-semibold text-sm mb-2">{item.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -164,13 +164,13 @@ export default async function CityPartsAndBuildPage({ params }: Props) {
       </section>
 
       {/* What's included */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-5">
-          <h2 className="text-2xl font-bold text-slate-800 mb-6">Everything Included</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-6">Everything Included</h2>
           <ul className="space-y-3">
             {svc.benefits.map((b) => (
-              <li key={b} className="flex items-center gap-3 text-slate-600 text-sm">
-                <svg className="w-4 h-4 text-[#0070FF] flex-shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <li key={b} className="flex items-center gap-3 text-muted-foreground text-sm">
+                <svg className="w-4 h-4 text-primary flex-shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M2 8l3.5 3.5L14 3.5" />
                 </svg>
                 {b}
@@ -181,16 +181,16 @@ export default async function CityPartsAndBuildPage({ params }: Props) {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-muted">
         <div className="max-w-4xl mx-auto px-5">
-          <h2 className="text-2xl font-bold text-slate-800 mb-8">
+          <h2 className="text-2xl font-bold text-foreground mb-8">
             Questions from {city.name} Customers
           </h2>
           <div className="space-y-5">
             {city.faq.map((item) => (
-              <div key={item.q} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-                <h3 className="font-semibold text-slate-800 mb-2">{item.q}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed">{item.a}</p>
+              <div key={item.q} className="bg-card border border-border p-6">
+                <h3 className="font-semibold text-foreground mb-2">{item.q}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{item.a}</p>
               </div>
             ))}
           </div>
@@ -198,28 +198,28 @@ export default async function CityPartsAndBuildPage({ params }: Props) {
       </section>
 
       {/* Quote form */}
-      <section id="quote" className="py-16 bg-white">
+      <section id="quote" className="py-16 bg-background">
         <div className="max-w-xl mx-auto px-5">
-          <h2 className="text-2xl font-bold text-slate-800 mb-2 text-center">
+          <h2 className="text-2xl font-bold text-foreground mb-2 text-center">
             Start Your Build in {city.name}
           </h2>
-          <p className="text-slate-500 text-center mb-8">Free consultation — we respond fast.</p>
-          <div className="bg-white border border-gray-200 rounded-xl p-7 shadow-sm">
+          <p className="text-muted-foreground text-center mb-8">Free consultation — we respond fast.</p>
+          <div className="bg-card border border-border p-7">
             <ContactForm defaultService="parts-and-build" defaultCity={city.name} />
           </div>
         </div>
       </section>
 
       {/* Other cities */}
-      <section className="py-14 bg-slate-50 border-t border-gray-200">
+      <section className="py-14 bg-muted border-t border-border">
         <div className="max-w-4xl mx-auto px-5">
-          <p className="text-sm text-slate-500 mb-4">Also serving nearby communities:</p>
+          <p className="text-sm text-muted-foreground mb-4">Also serving nearby communities:</p>
           <div className="flex flex-wrap gap-2">
             {nearbyCities.map((c) => (
               <Link
                 key={c.slug}
                 href={`/services/parts-and-build/${c.slug}`}
-                className="bg-white border border-gray-200 hover:border-[#0070FF] text-slate-600 hover:text-[#0070FF] text-sm px-4 py-2 rounded-lg transition-all"
+                className="bg-card border border-border hover:border-primary text-muted-foreground hover:text-primary text-sm px-4 py-2 transition-all"
               >
                 {c.name}, MO
               </Link>
