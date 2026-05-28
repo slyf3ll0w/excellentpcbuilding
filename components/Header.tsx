@@ -17,20 +17,16 @@ export function Header() {
 
   return (
     <header className="bg-[#060B16]/95 backdrop-blur-md border-b border-[#1A2840] sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 group">
+        <Link href="/" className="flex items-center group">
           <Image
             src="/logo.png"
             alt="Excellent PC Building"
-            width={44}
-            height={44}
-            className="w-10 h-10 object-contain"
+            width={400}
+            height={400}
+            className="w-[400px] h-[400px] object-contain"
           />
-          <span className="font-extrabold text-white text-[15px] leading-tight hidden sm:block">
-            Excellent<br />
-            <span className="text-[#0070FF] font-bold text-[13px] tracking-wide">PC BUILDING</span>
-          </span>
         </Link>
 
         {/* Desktop nav */}

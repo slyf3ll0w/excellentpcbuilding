@@ -19,7 +19,7 @@ export function ContactForm({ defaultService, defaultCity }: Props) {
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    const res = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+    const res = await fetch("https://formspree.io/f/xgoqdvjj", {
       method: "POST",
       body: data,
       headers: { Accept: "application/json" },
@@ -65,7 +65,7 @@ export function ContactForm({ defaultService, defaultCity }: Props) {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
           <label className={labelCls}>Phone Number</label>
-          <input name="phone" type="tel" placeholder="(417) 555-0100" className={inputCls} />
+          <input name="phone" type="tel" placeholder="(417) 319-7589" className={inputCls} />
         </div>
         <div>
           <label className={labelCls}>Your City *</label>

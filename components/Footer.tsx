@@ -27,8 +27,8 @@ export function Footer() {
             </p>
             <p className="text-gray-500 text-sm mt-3">
               Springfield, MO<br />
-              <a href="mailto:info@excellentpcbuilding.com" className="text-[#0070FF] hover:underline">
-                info@excellentpcbuilding.com
+              <a href="mailto:excellentpcbuilding@gmail.com" className="text-[#0070FF] hover:underline">
+                excellentpcbuilding@gmail.com
               </a>
             </p>
           </div>

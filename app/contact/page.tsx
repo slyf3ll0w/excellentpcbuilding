@@ -84,10 +84,10 @@ export default function ContactPage() {
               <div className="bg-slate-50 border border-gray-200 rounded-xl p-5">
                 <p className="text-xs text-slate-400 uppercase tracking-widest font-semibold mb-2">Email Us Directly</p>
                 <a
-                  href="mailto:info@excellentpcbuilding.com"
+                  href="mailto:excellentpcbuilding@gmail.com"
                   className="text-[#0070FF] hover:underline font-medium"
                 >
-                  info@excellentpcbuilding.com
+                  excellentpcbuilding@gmail.com
                 </a>
               </div>
             </div>
