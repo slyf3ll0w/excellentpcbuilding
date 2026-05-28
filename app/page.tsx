@@ -295,7 +295,7 @@ export default function HomePage() {
       {/* ── SERVICE AREAS ────────────────────────────────────── */}
       <section className="py-24 bg-muted">
         <div className="max-w-6xl mx-auto px-5">
-          <div className="text-center mb-14">
+          <div className="text-center mb-10">
             <span className="inline-block bg-primary/15 text-primary text-xs font-bold uppercase tracking-wider px-3 py-1 mb-4">
               Where We Serve
             </span>
@@ -303,24 +303,33 @@ export default function HomePage() {
               Serving Southwest Missouri
             </h2>
             <p className="text-muted-foreground mt-3 max-w-xl mx-auto">
-              Based in Springfield, we serve communities across the region. Click your city for local service info.
+              Based in Springfield, we serve communities across the region.
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3">
-            {cities.map((city) => (
-              <Link
-                key={city.slug}
-                href={`/services/pc-build/${city.slug}`}
-                className="bg-card border border-border p-4 text-center hover:border-primary hover:bg-primary/5 transition-all group"
-              >
-                <svg className="w-5 h-5 text-primary/50 group-hover:text-primary mx-auto mb-2 transition-colors" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                </svg>
-                <p className="text-foreground text-xs font-semibold group-hover:text-primary transition-colors">{city.name}</p>
-                <p className="text-muted-foreground text-[10px]">MO</p>
-              </Link>
-            ))}
+
+          <div className="border-2 border-border overflow-hidden">
+            <iframe
+              src="https://maps.google.com/maps?q=Springfield,+MO&z=9&output=embed"
+              width="100%"
+              height="480"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Excellent PC Building Service Area — Southwest Missouri"
+            />
           </div>
+
+          <p className="text-center text-muted-foreground text-sm mt-6 leading-relaxed">
+            {cities.map((c, i) => (
+              <span key={c.slug}>
+                <Link href={`/services/pc-build/${c.slug}`} className="hover:text-primary transition-colors">
+                  {c.name}
+                </Link>
+                {i < cities.length - 1 && <span className="mx-2 text-border">·</span>}
+              </span>
+            ))}
+          </p>
         </div>
       </section>
 
