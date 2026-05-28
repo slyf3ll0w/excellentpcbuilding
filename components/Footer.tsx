@@ -9,18 +9,14 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-4">
+            <Link href="/" className="flex items-center mb-4">
               <Image
                 src="/logo.png"
                 alt="Excellent PC Building"
-                width={52}
-                height={52}
-                className="w-12 h-12 object-contain"
+                width={133}
+                height={133}
+                className="w-[133px] h-[133px] object-contain"
               />
-              <span className="font-extrabold text-white text-base leading-tight">
-                Excellent<br />
-                <span className="text-[#0070FF] font-bold text-sm tracking-wide">PC BUILDING</span>
-              </span>
             </Link>
             <p className="text-gray-500 text-sm leading-relaxed">
               Springfield&apos;s premier custom PC building service. Professional builds, fair prices.
