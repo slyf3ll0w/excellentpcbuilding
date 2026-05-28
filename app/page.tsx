@@ -207,8 +207,8 @@ export default function HomePage() {
 
       {/* ── WHY US ───────────────────────────────────────────── */}
       <section className="py-24 bg-muted">
-        <div className="max-w-6xl mx-auto px-5">
-          <div className="text-center mb-14">
+        <div className="max-w-5xl mx-auto px-5">
+          <div className="mb-14">
             <span className="inline-block bg-primary/15 text-primary text-xs font-bold uppercase tracking-wider px-3 py-1 mb-4">
               Why Choose Us
             </span>
@@ -216,19 +216,16 @@ export default function HomePage() {
               Built right. Backed by us.
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {whyUs.map((item) => (
-              <div
-                key={item.title}
-                className="bg-card border border-border p-6 relative overflow-hidden"
-              >
-                {/* Left accent stripe */}
-                <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-primary" />
-                <div className="w-11 h-11 bg-primary/15 text-primary flex items-center justify-center mb-4">
-                  {item.icon}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16">
+            {whyUs.map((item, i) => (
+              <div key={item.title} className="flex gap-6 py-7 border-b border-border last:border-b-0 md:[&:nth-last-child(2)]:border-b-0 group">
+                <span className="text-4xl font-bold text-primary/20 group-hover:text-primary/40 transition-colors leading-none flex-shrink-0 w-12 text-right">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div className="pt-0.5">
+                  <h3 className="font-bold text-foreground text-base mb-1.5">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
                 </div>
-                <h3 className="font-semibold text-foreground text-base mb-2">{item.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>

@@ -136,22 +136,23 @@ export default function AboutPage() {
 
       {/* Values */}
       <section className="py-20 bg-muted">
-        <div className="max-w-5xl mx-auto px-5">
-          <div className="text-center mb-12">
+        <div className="max-w-4xl mx-auto px-5">
+          <div className="mb-12">
             <span className="inline-block bg-primary/15 text-primary text-xs font-bold uppercase tracking-wider px-3 py-1 mb-4">
               How We Work
             </span>
             <h2 className="text-2xl font-bold text-foreground">What you can expect from Brendan</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {values.map((v) => (
-              <div key={v.title} className="bg-card border border-border p-6 relative overflow-hidden">
-                <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-primary" />
-                <div className="w-11 h-11 bg-primary/15 text-primary flex items-center justify-center mb-4">
-                  {v.icon}
+          <div>
+            {values.map((v, i) => (
+              <div key={v.title} className="flex gap-8 py-8 border-b border-border last:border-b-0 group">
+                <span className="text-5xl font-bold text-primary/20 group-hover:text-primary/40 transition-colors leading-none flex-shrink-0 w-16 text-right">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div className="pt-1">
+                  <h3 className="font-bold text-foreground text-lg mb-2">{v.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{v.desc}</p>
                 </div>
-                <h3 className="font-semibold text-foreground text-base mb-2">{v.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{v.desc}</p>
               </div>
             ))}
           </div>
