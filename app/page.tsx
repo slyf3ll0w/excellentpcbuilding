@@ -100,9 +100,9 @@ export default function HomePage() {
         {/* Primary color glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-64 bg-primary/20 blur-3xl pointer-events-none" />
         <div className="relative max-w-5xl mx-auto px-5">
-          <span className="inline-block bg-primary/20 border border-primary/40 text-primary text-sm font-semibold px-4 py-1.5 mb-6 tracking-wide">
-            Springfield, Missouri&apos;s Custom PC Experts
-          </span>
+          <div className="flex justify-center mb-6">
+            <Image src="/logo.png" alt="Excellent PC Building" width={160} height={160} className="w-40 h-40 object-contain" />
+          </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight tracking-tight mb-5">
             Professional <span className="text-primary">PC Building</span>
             <br />
