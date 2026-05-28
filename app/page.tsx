@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { cities, SERVICES } from "@/lib/cities";
 import { ContactForm } from "@/components/ContactForm";
+import { ServiceAreaMap } from "@/components/ServiceAreaMap";
 
 const whyUs = [
   {
@@ -307,18 +308,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="border-2 border-border overflow-hidden">
-            <iframe
-              src="https://maps.google.com/maps?q=Springfield,+MO&z=9&output=embed"
-              width="100%"
-              height="480"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Excellent PC Building Service Area — Southwest Missouri"
-            />
-          </div>
+          <ServiceAreaMap />
 
           <p className="text-center text-muted-foreground text-sm mt-6 leading-relaxed">
             {cities.map((c, i) => (
